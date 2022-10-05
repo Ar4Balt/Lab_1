@@ -13,7 +13,7 @@ public class Pie extends Food{
     }
 
     public String Choice(){
-        System.out.println("What do you prefer green or black? (G/b): ");
+        System.out.println("What do you prefer Cherry, Strawberry or Apple? (G/b): ");
         Scanner scanner = new Scanner(System.in);
         while (true) {
             String color_Tea = scanner.nextLine().toLowerCase();
