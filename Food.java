@@ -1,3 +1,4 @@
+//реализуем интерфейс
 public abstract class Food implements Consumable {
     public String Name;
     protected double Calories = 0.0f;

@@ -1,7 +1,9 @@
 import java.util.Scanner;
-
+//Создается новый Pie класс на основе существующего Food
 public class Pie extends Food{
     public Pie(String Filing){
+        //обозначает суперкласс, т. е. класс,
+        //производным от которого является текущий класс.
         super("pie");
         this.Name = Filing;
         this.Calories = 45.8f;

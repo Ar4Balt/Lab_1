@@ -1,7 +1,9 @@
 import java.util.Scanner;
-
+//Создается новый Tea класс на основе существующего Food
 public class Tea extends Food{
     public Tea(String Color){
+        //обозначает суперкласс, т. е. класс,
+        //производным от которого является текущий класс.
         super("tea");
         this.Name = Color;
         this.Calories = 45.8f;
