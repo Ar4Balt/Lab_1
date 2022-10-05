@@ -1,4 +1,3 @@
-import java.io.IOException;
 import java.util.*;
 
 public class Main {
@@ -13,10 +12,11 @@ public class Main {
                 System.out.println("What do you want?");
                 System.out.println("I would like to ");
 
-                String Name = scanner.nextLine().toLowerCase();
-                switch (Name) {
-                    case "tea":
-                        breakfast.add(new Tea());
+                if (scanner.nextLine().toLowerCase().equals("tea")) {
+                    breakfast.add(new Tea());
+                }
+                if (scanner.nextLine().toLowerCase().equals("pie")) {
+                    breakfast.add(new Pie());
                 }
 
                 System.out.println("Anything else? (Y/n): ");
