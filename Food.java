@@ -1,6 +1,6 @@
 public abstract class Food implements Consumable {
     public String Name;
-    protected double Calories = 0.f;
+    protected double Calories = 0.0f;
 
     public Food(String Name, double Calories){
         this.Name = Name;
@@ -8,7 +8,7 @@ public abstract class Food implements Consumable {
     }
     public Food(String Name){
         this.Name = Name;
-        this.Calories =  Double.parseDouble(Name);
+        this.Calories = 0.0f;
 
     }
     public Food(double Calories){
