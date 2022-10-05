@@ -7,6 +7,7 @@ public class Main {
         Vector<Food> breakfast = new Vector<Food>();
         System.out.println("Do you want food? (Y/n): ");
         String choice = scanner.nextLine().toLowerCase();
+        //Привет мир)
         if(choice.equals("y")) {
             while (true) {
                 System.out.println("What do you want?");
