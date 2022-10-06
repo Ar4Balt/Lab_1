@@ -28,19 +28,28 @@ public class Main {
                 // (символа перевода строки или конца потока)
                 // и возвращает всё, что было в этой строке
                 //toLowerCase() - функция для перевода на нижний регистр
-                if (scanner.nextLine().toLowerCase().equals("tea")) {
+                String Name_food = scanner.nextLine().toLowerCase();
+                if (Name_food.equals("tea")) {
                     //Добавляем в наш Vector новую переменную
                     breakfast.add(new Tea());
                 }
-                if (scanner.nextLine().toLowerCase().equals("pie")) {
+                if (Name_food.equals("pie")) {
                     breakfast.add(new Pie());
+                }
+                if(Name_food.equals("-c") || Name_food.equals("-calories")){
+                    //Функция для вывода калорий
+                    Calculate_calories(breakfast);
                 }
 
                 System.out.println("Anything else? (Y/n): ");
-                choice = scanner.nextLine();
-                if(choice.toLowerCase().equals("n")){
+                Name_food = scanner.nextLine().toLowerCase();
+                if(Name_food.equals("n") || Name_food.equals("no")){
+                    Calculate_calories(breakfast);
                     System.out.println("Ok, have a nice day!)");
                     break;
+                }
+                else{
+                    continue;
                 }
             }
         }
@@ -48,5 +57,12 @@ public class Main {
             System.out.println("Ok, have a nice day!)");
         }
     }
-
+    //Функция для вывода калорий
+    public static void Calculate_calories(Vector<Food> breakfast) {
+        double max_calories = 0.0f;
+        for (int i = 0; i < breakfast.size(); i++){
+            max_calories += breakfast.get(i).Calories;
+        }
+        System.out.println("Calories: " + max_calories);
+    }
 }
